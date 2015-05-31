@@ -12,9 +12,6 @@
   },
   "repository": "binarystash/jquery-basic-image-popup",
   "license": "MIT",
-  "scripts": {
-    "test": "grunt"
-  },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.11.0",
     "grunt-contrib-qunit": "~0.5.2",
