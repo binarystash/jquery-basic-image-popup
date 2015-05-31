@@ -1,4 +1,6 @@
 (function ($) {
+	QUnit.config.autostart = true;
+	
 	module('jQuery#jqueryBasicImagePopup', {
 		setup: function () {
 			this.elems = $('#qunit-fixture').children();
@@ -8,6 +10,7 @@
 	test('is chainable', function () {
 		expect(1);
 		strictEqual(this.elems.basicImagePopup(), this.elems, 'should be chainable');
+		
 	});
 	
 	test('opens popup', function() {
@@ -17,6 +20,8 @@
 		
 		this.elems.eq(0).trigger('click');
 		strictEqual($('.basic-image-popup-overlay').length, 1, 'popup must open');
+		
+		
 	});
 	
 	test('closes popup', function() {
@@ -31,6 +36,8 @@
 		this.elems.eq(1).trigger('click');
 		$('.basic-image-popup-overlay').trigger('click');
 		strictEqual($('.basic-image-popup-overlay').length, 0, 'popup must close');
+		
+		
 	});
 	
 	test('add overlay class', function() {
@@ -43,6 +50,8 @@
 		this.elems.eq(0).trigger('click');
 		
 		strictEqual($('.basic-image-popup-overlay.my-custom-popup.my-own-popup').length, 1, 'popup must have custom classes');
+		
+		
 	});
 	
 	test('test beforeOpen', function() {
@@ -57,6 +66,8 @@
 		this.elems.eq(0).trigger('click');
 		
 		strictEqual($('.basic-image-popup-overlay.open').length, 1, 'beforeOpen must work');
+		
+		
 	});
 	
 	test('test afterOpen', function() {
@@ -75,6 +86,8 @@
 		
 		strictEqual($('.another-div').length, 1, 'afterOpen must work');
 		
+		
+		
 	});
 	
 	test('test beforeClose', function() {
@@ -90,6 +103,8 @@
 		$('.basic-image-popup-overlay').trigger('click');
 		
 		strictEqual($('.another-div').length, 1, 'afterOpen must work');
+		
+		
 	});
 	
 	test('test afterClose', function() {
@@ -105,6 +120,8 @@
 		$('.basic-image-popup-overlay').trigger('click');
 		
 		strictEqual($('.another-div').length, 1, 'afterOpen must work');
+		
+		
 	});
 	 
 }(jQuery));

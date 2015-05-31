@@ -40,8 +40,7 @@ module.exports = function (grunt) {
     qunit: {
       all: {
         options: {
-          urls: ['http://localhost:9000/test/<%= pkg.name %>.html'],
-		  timeout:30000
+          urls: ['http://localhost:9000/test/<%= pkg.name %>.html']
         }
       }
     },
