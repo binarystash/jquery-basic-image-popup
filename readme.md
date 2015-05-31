@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/binarystash/jquery-basic-image-popup.svg)](https://travis-ci.org/binarystash/jquery-basic-image-popup)
+
 # jQuery Basic Image Popup
 
 A very simple image popup plugin
@@ -33,6 +35,14 @@ In your web page:
 	```
 	
 3. Customize appearance by editing jquery-basic-image-popup.css.
+
+##Options
+
+* `overlayClass` - adds a custom class to the popup
+* `beforeOpen` - function to call immediately before the popup opens. Accepts the popup object as argument: function(popup) {}
+* `afterOpen` - function to call immediately after the popup opens. Accepts the popup object as argument: function(popup) {}
+* `beforeClose` - function to call immediately before the popup closes. Accepts the popup object as argument: function(popup) {}
+* `afterClose` - function to call immediately after the popup closes. Accepts the popup object as argument: function(popup) {}
 
 ##Compatibility
 Tested on IE8; latest versions of Firefox and Chrome
