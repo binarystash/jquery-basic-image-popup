@@ -85,6 +85,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           hostname: '*',
+		  open:true,
           port: 9000
         }
       }
