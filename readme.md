@@ -8,8 +8,8 @@ A very simple image popup plugin
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.githubusercontent.com/binarystash/jquery-jquery-basic-image-popup/master/dist/jquery.jquery-basic-image-popup.min.js
-[max]: https://raw.githubusercontent.com/binarystash/jquery-jquery-basic-image-popup/master/dist/jquery.jquery-basic-image-popup.js
+[min]: https://raw.githubusercontent.com/binarystash/jquery-basic-image-popup/master/dist/jquery.jquery-basic-image-popup.min.js
+[max]: https://raw.githubusercontent.com/binarystash/jquery-basic-image-popup/master/dist/jquery.jquery-basic-image-popup.js
 
 In your web page:
 
