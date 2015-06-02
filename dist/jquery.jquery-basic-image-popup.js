@@ -1,4 +1,4 @@
-/*! jquery-basic-image-popup - v1.0.0 - 2015-05-31
+/*! jquery-basic-image-popup - v1.0.0 - 2015-06-02
 * Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
 	
@@ -12,7 +12,7 @@
 			
 			$(v).click( function(e) {
 				e.preventDefault();
-				$.fn.basicImagePopup.openPopup( popup );
+				$.fn.basicImagePopup.openPopup( popup, $(v) );
 			});
 				
 		});
@@ -44,7 +44,7 @@
 		popupOverlay.append(popupContent);  
 		
 		popupOverlay.add(closeButton).on('click', function(){
-			$.fn.basicImagePopup.closePopup( popupOverlay ); 
+			$.fn.basicImagePopup.closePopup( popupOverlay, link ); 
 		});
 		
 		popupOverlay.find(".basic-image-popup-content").on('click', function(e) {
@@ -55,30 +55,30 @@
 		
 	};
 
-	$.fn.basicImagePopup.openPopup = function(popup) {
+	$.fn.basicImagePopup.openPopup = function(popup, link) {
 		
 		if ( typeof $.fn.basicImagePopup.useOptions.beforeOpen === 'function' ) {
-			$.fn.basicImagePopup.useOptions.beforeOpen(popup);
+			$.fn.basicImagePopup.useOptions.beforeOpen( popup, link );
 		}
 		
 		$("body").append(popup);   
 		
 		if ( typeof $.fn.basicImagePopup.useOptions.afterOpen === 'function' ) {
-			$.fn.basicImagePopup.useOptions.afterOpen( popup );
+			$.fn.basicImagePopup.useOptions.afterOpen( popup, link );
 		}	
 			
 	};
 
-	$.fn.basicImagePopup.closePopup = function(popup) {
+	$.fn.basicImagePopup.closePopup = function(popup, link) {
 		
 		if ( typeof $.fn.basicImagePopup.useOptions.beforeClose === 'function' ) {
-			$.fn.basicImagePopup.useOptions.beforeClose(popup);
+			$.fn.basicImagePopup.useOptions.beforeClose( popup, link );
 		}
 		
 		popup.detach();
 		
 		if ( typeof $.fn.basicImagePopup.useOptions.afterClose === 'function' ) {
-			$.fn.basicImagePopup.useOptions.afterClose(popup);
+			$.fn.basicImagePopup.useOptions.afterClose( popup, link );
 		}
 		
 	};

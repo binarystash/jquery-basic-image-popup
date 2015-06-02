@@ -39,10 +39,10 @@ In your web page:
 ##Options
 
 * `overlayClass` - adds a custom class to the popup
-* `beforeOpen` - function to call immediately before the popup opens. Accepts the popup object as argument: function(popup) {}
-* `afterOpen` - function to call immediately after the popup opens. Accepts the popup object as argument: function(popup) {}
-* `beforeClose` - function to call immediately before the popup closes. Accepts the popup object as argument: function(popup) {}
-* `afterClose` - function to call immediately after the popup closes. Accepts the popup object as argument: function(popup) {}
+* `beforeOpen` - function to call immediately before the popup opens. Accepts the popup and anchor objects as arguments: function(popup, anchor)
+* `afterOpen` - function to call immediately after the popup opens. Accepts the popup and anchor objects as arguments: function(popup, anchor)
+* `beforeClose` - function to call immediately before the popup closes. Accepts the popup and anchor objects as arguments: function(popup, anchor)
+* `afterClose` - function to call immediately after the popup closes. Accepts the popup and anchor objects as arguments: function(popup, anchor)
 
 ##Compatibility
 Tested on IE8; latest versions of Firefox and Chrome
