@@ -1,3 +1,7 @@
+html.basic-image-popup-active {
+	overflow:hidden;
+}
+
 .basic-image-popup-overlay {
     top:0;
     left:0;
